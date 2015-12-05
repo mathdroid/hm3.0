@@ -1,0 +1,17 @@
+<ul ng-controller="CaseListController" class="collection">    
+    <li ng-repeat="case in cases" class="collection-item avatar">
+      <i class="material-icons circle"></i>
+      <span class="title">{{case.judul}}</span>
+	  <p>
+		  <div class="chip">
+		    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQyJPu_QE-sCgxsCmBnbR81fH6mW2_dpLGDniFATikA9hoSB5ZEOVvic5_l" alt="Contact Person">
+		    {{case.id}}
+		  </div>
+		  <div class="chip">
+		    <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQyJPu_QE-sCgxsCmBnbR81fH6mW2_dpLGDniFATikA9hoSB5ZEOVvic5_l" alt="Contact Person">
+		    {{case.id}}
+		  </div>
+	  </p> 
+      <a href="#/cases/{{case.$id}}" class="secondary-content"><i class="material-icons">visibility</i>221</a>
+    </li>
+</ul>

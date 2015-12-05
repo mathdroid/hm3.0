@@ -1,0 +1,58 @@
+<div class="row">
+	<h4 class="center">{{case.judul}}</h4>
+	<div class="col s12 m12 l12">
+		<div class="progress">
+		    <div class="determinate" style="width: 70%"></div>
+		</div>
+		<br>
+		<h5 class="teal-text">
+			Nomor Perkara
+		</h5>
+		<span>
+			{{case.nomor_perkara}}
+		</span>
+		<h5 class="teal-text">
+			Tanggal Pendaftaran Kasus
+		</h5>
+		<span>
+			{{case.tanggal_pendaftaran}}
+		</span>
+		<h5 class="teal-text">
+			Dakwaan
+		</h5>
+		<span>
+			{{case.dakwaan}}
+		</span>
+		<h5 class="teal-text">
+			Status Putusan
+		</h5>
+		<span>
+			{{case.status_putusan}}
+		</span>		
+		<h5 class="teal-text">
+			Proses Saat Ini
+		</h5>
+		<span>
+			{{case.proses}}
+		</span>
+		<h5 class="teal-text">
+			Terdakwa
+		</h5>
+		<span>
+			{{case.terdakwa}}
+		</span>
+		<h5 class="teal-text">
+			Majelis Hakim
+		</h5>
+		<span>
+			Ketua : {{case.hakim.ketua}}
+		</span>
+		<br>
+		<span>
+			Anggota : {{case.hakim.anggota1}}, {{case.hakim.anggota2}}, {{case.hakim.anggota3}}
+		</span>		
+		<h5 class="teal-text">
+			Jumlah Uang Dikorupsi
+		</h5>	
+	</div>
+</div>
