@@ -1,43 +1,57 @@
-<div class="row">
-	<div class="col s12 m12 l12">
+<title>SIKK</title>
 
-		<h4>Pilihan Editor</h4>
+	<!-- <div class="row"> -->
+		
 
-		<h4>Kasus Teratas</h4>		
-		<ul class="collection">
-		    <li ng-repeat="case in cases" class="collection-item avatar">
-		      <i class="material-icons circle"></i>
-		      <a href="#/cases/{{case.$id}}" class="title teal-text">{{case.judul}}</a>
-		      <br>
-			  <span>{{case.terdakwa}} </span>
-		      <a ng-click="incrementWatcher(case)" class="secondary-content"><i class="material-icons">visibility</i>{{case.watcher}}</a>
-		      <!-- <input type="text" ng-model="case.watcher" ng-change="cases.$save(case)" /> -->
-		    </li>
-		</ul>
+			<!-- <h4 class="center red">Pilihan Editor</h4> -->
+		<div id="home">
+			<div>
+				<h4 class="center red-text text-accent-2">Kasus Teratas</h4>
+				<div class="container">
+					<ul class="collection">
+					    <li ng-repeat="case in cases" class="collection-item avatar grey lighten-5">
+					      <img class="right" src="img/brick.png">
+					      <a href="#/cases/{{case.$id}}" class="title grey-text text-darken-2">{{case.judul}}</a>
+					      <br>
+						  <span>{{case.terdakwa}} </span>
+						  <br>
+					      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper"><i class="material-icons">visibility</i>{{case.watcher}}</a>           
+					    </li>
+					</ul>
+				</div>
+			</div>
 
-		<h4>Koruptor Teratas</h4>
+			<div class="grey lighten-3">
+				<div class="container">
+					<h4 class="center red-text text-accent-2">Koruptor Teratas</h4>
+				
+					<div class="row">
 
-		<div class="row">
+					  <div ng-repeat="corruptor in corruptors" class="col s12 m3 l3">
+					    <a href="#/corruptors/{{corruptor.$id}}">
+					      <div class="card z-depth-1 hoverable waves-effect waves-light black-text corruptor-card">
+					        <div class="card-content center">
+					          <p>Rp{{corruptor.value}},00</p>
+					          <br>
+					          <img src="{{corruptor.photo}}" class="circle">
+					          <br>
+					          <p>{{corruptor.name}}</p>
+					          <p>{{corruptor.profession}}</p>
+					        </div>
+					      </div>
+					    </a>
+					  </div>
 
-		  <div ng-repeat="corruptor in corruptors" class="col s12 m3 l3">
-		    <a href="#/corruptors/{{corruptor.$id}}">
-		      <div class="card z-depth-1 hoverable waves-effect waves-light teal-text corruptor-card">
-		        <div class="card-content center">
-		          <p>Rp{{corruptor.value}},00</p>
-		          <br>
-		          <img src="{{corruptor.photo}}" class="circle">
-		          <br>
-		          <p>{{corruptor.name}}</p>
-		          <p>{{corruptor.profession}}</p>
-		        </div>
-		      </div>
-		    </a>
-		  </div>
+					</div>
+				</div>
+			</div>
 
+			<div>
+				<div class="container">
+					<h4 class="center red-text text-accent-2">Trivia</h4>
+					<h6 class="center">{{trivia.trivia}}</h6>
+				</div>
+			</div>
 		</div>
 
-		<h4>Trivia</h4>
-		{{trivia.trivia}}
-
-	</div>
-</div>
+	<!-- </div> -->

@@ -1,13 +1,15 @@
-<h4 class="center">Daftar Kasus Korupsi</h4>
+<title>Daftar Kasus</title>
+<!-- <h4 class="center">Daftar Kasus Korupsi</h4> -->
 <br>
-
-<ul class="collection">
-    <li ng-repeat="case in cases" class="collection-item avatar">
-      <i class="material-icons circle"></i>
-      <a href="#/cases/{{case.$id}}" class="title teal-text">{{case.judul}}</a>
-      <br>
-	  <span>{{case.terdakwa}} </span>
-      <a ng-click="incrementWatcher(case)" class="secondary-content"><i class="material-icons">visibility</i>{{case.watcher}}</a>
-      <!-- <input type="text" ng-model="case.watcher" ng-change="cases.$save(case)" /> -->
-    </li>
-</ul>
+<div class="container">
+	<ul class="collection">
+	    <li ng-repeat="case in cases" class="collection-item avatar">
+	      <img class="right" src="img/brick.png">
+	      <a href="#/cases/{{case.$id}}" class="title teal-text">{{case.judul}}</a>
+	      <br>
+		  <span>{{case.terdakwa}} </span>
+		  <br>
+	      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper"><i class="material-icons">visibility</i>{{case.watcher}}</a>           
+	    </li>
+	</ul>
+</div>

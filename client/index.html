@@ -17,7 +17,6 @@
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
     <script src="app/app.js"></script>
 
-    <title>SIKK</title>
 </head>
 <body>
 	<header>
@@ -25,28 +24,24 @@
 	    <nav class="red lighten-2" role="navigation">
 	      <div class="nav-wrapper">
 	        <a class="brand-logo center" href="#!" ui-sref="/">SIKK</a>
-	        <ul id="nav-mobile" class="hide-on-med-and-down">
+	        <ul id="nav-mobile">
 		        <li><a href="#/cases">Kasus</a></li>
 		        <li><a href="#/corruptors">Koruptor</a></li>
 		    </ul>
-	        <form class="right">
+	        <!-- <form class="right">
 	          <div class="input-field">
 	            <input id="search-input" type="search">
 	            <label class="right" for="search-input"><i class="material-icons">search</i></label>
 	            <i id="search-close" class="material-icons">close</i>
 	          </div>
-	        </form>
+	        </form> -->
 	      </div>
 	    </nav>
 	  </div>
 	</header>
 
-	<main>
-	
-		<div class="container">
-	 		<div ng-view></div>
-	 	</div>
-
+	<main>		
+	 	<div ng-view></div>	 	
 	</main>
 
  	<footer class="page-footer white">
