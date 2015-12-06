@@ -90,6 +90,30 @@ angular.module('sikk', ['ngRoute','firebase'])
     .catch(function(error) {
         console.log("Error:", error);
     });
+    $scope.incrementBrick = function() {
+      $scope.corruptor.reactions.brick++;
+      corruptorArray.$save($scope.corruptor);  
+    }
+    $scope.incrementFire = function() {
+      $scope.corruptor.reactions.fire++;
+      corruptorArray.$save($scope.corruptor);  
+    }
+    $scope.incrementHeart = function() {
+      $scope.corruptor.reactions.heart++;
+      corruptorArray.$save($scope.corruptor);  
+    }
+    $scope.incrementMouse = function() {
+      $scope.corruptor.reactions.mouse++;
+      corruptorArray.$save($scope.corruptor);  
+    }
+    $scope.incrementPoop = function() {
+      $scope.corruptor.reactions.poop++;
+      corruptorArray.$save($scope.corruptor);  
+    }
+    $scope.incrementSkull = function() {
+      $scope.corruptor.reactions.skull++;
+      corruptorArray.$save($scope.corruptor);  
+    }
 }])
 
 .controller('CorruptorListController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl", function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
