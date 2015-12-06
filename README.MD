@@ -1,5 +1,15 @@
 # Sikk Web
 
+## TLDR
+
+ 1. `npm install`
+
+ 2. `bower install`
+
+ 3. `grunt --force` **USE THE FORCE BABY**
+
+ 4. `grunt serve --force` **THE FORCE IS STRONG**
+
 ## Getting Started
 
 ### Prerequisites

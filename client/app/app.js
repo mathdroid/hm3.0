@@ -1,5 +1,7 @@
+'use strict';
+
 angular.module('sikk', ['ngRoute','firebase'])
- 
+
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
         template: '<h1>Welcome to SIKK</h1>',
@@ -18,8 +20,8 @@ angular.module('sikk', ['ngRoute','firebase'])
     })
     .when('/cases', {
         templateUrl: 'partials/cases.html',
-        controller: 'CaseListController'        
-    })    
+        controller: 'CaseListController'
+    })
     .otherwise({
         redirectTo: '/'
     });
@@ -33,10 +35,10 @@ angular.module('sikk', ['ngRoute','firebase'])
 	    if ($scope.email && $scope.password) {
 	      $scope.users.$add({ email: $scope.email, password: $scope.password });
 	      $scope.users = "";
-	      // $location.path = "/";	      
+	      // $location.path = "/";
 	    }
   	}
-    
+
 }])
 
 .controller('CaseDetailController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl",  function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
@@ -47,12 +49,12 @@ angular.module('sikk', ['ngRoute','firebase'])
     })
     .catch(function(error) {
 	    console.log("Error:", error);
-	});      
+	});
 }])
 
 .controller('CaseListController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl", function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
-	var ref = new Firebase(FirebaseUrl + "cases");    
-    $scope.cases = $firebaseArray(ref);       
+	var ref = new Firebase(FirebaseUrl + "cases");
+    $scope.cases = $firebaseArray(ref);
 }])
 
 .constant('FirebaseUrl', 'https://shining-heat-6633.firebaseio.com/')
