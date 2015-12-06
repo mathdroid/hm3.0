@@ -7,13 +7,13 @@
 
     <div ng-repeat="corruptor in corruptors" class="col s12 m3 l3">
       <a href="#/corruptors/{{corruptor.$id}}">
-        <div class="card z-depth-1 hoverable waves-effect waves-light teal-text corruptor-card">
+        <div class="card z-depth-1 hoverable waves-effect waves-light grey-text text-darken-2 corruptor-card">
           <div class="card-content center">
-            <p>Rp{{corruptor.value}},00</p>
+            <p class="red-text text-lighten-2">Rp{{corruptor.value}},00</p>
             <br>
             <img src="{{corruptor.photo}}" class="circle">
             <br>
-            <p>{{corruptor.name}}</p>
+            <strong>{{corruptor.name}}</strong>
             <p>{{corruptor.profession}}</p>
           </div>
         </div>

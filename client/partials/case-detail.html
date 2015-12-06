@@ -1,17 +1,12 @@
 <title>{{case.judul}}</title>
 <div class="container">
 	<div class="row">
+		<br>
 		<h4 class="center">{{case.judul}}</h4>
 		<div class="col s1 offset-s11">
-			<a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper"><i class="material-icons">visibility</i>{{case.watcher}}</a>		
+			<a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper black-text"><i class="material-icons black-text">visibility</i>{{case.watcher}}</a>		
 		</div>
-		<hr>
-
-		<div class="col s12 m12 l12">
-			
-			<a ng-click="incrementKemandekan(case)" class="waves-effect waves-light btn">Komplain Keterlambatan Kasus</a>
-			{{case.komplain_kemandekan}}
-		</div>
+		<hr>		
 
 		<div class="col s12 m12 l12 case-detail">
 			<h5>Deskripsi Umum</h5>
@@ -54,8 +49,17 @@
 			<div ng-if="currentProcess > 3">
 				<hr>
 				<h5>Putusan Kasasi</h5>			
-			</div>
+				<hr>
+			</div>	
 
 		</div>
+
+		<div class="col s12 m12 l12">						
+			Komplain Keterlambatan Kasus:
+			{{case.komplain_kemandekan}}
+			&nbsp;
+			<a ng-click="incrementKemandekan(case)" class="waves-effect waves-light btn grey darken-3">+</a>
+		</div>
+
 	</div>
 </div>

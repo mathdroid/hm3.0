@@ -5,11 +5,11 @@
 	<ul class="collection">
 	    <li ng-repeat="case in cases" class="collection-item avatar">
 	      <img class="right" src="img/brick.png">
-	      <a href="#/cases/{{case.$id}}" class="title teal-text">{{case.judul}}</a>
+	      <a href="#/cases/{{case.$id}}" class="title grey-text text-darken-2">{{case.judul}}</a>
 	      <br>
 		  <span>{{case.terdakwa}} </span>
 		  <br>
-	      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper"><i class="material-icons">visibility</i>{{case.watcher}}</a>           
+	      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper black-text"><i class="material-icons black-text">visibility</i>{{case.watcher}}</a>           
 	    </li>
 	</ul>
 </div>

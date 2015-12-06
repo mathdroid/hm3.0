@@ -35,26 +35,27 @@
 	    </div>
 
 		<div class="col s12 m8 l8 corruptor-detail">
-			
-			<h5>
-				Nama
-			</h5>
-			<span>{{corruptor.name}}</span>
-			
-			<h5>
-				Profesi
-			</h5>
-		    <span>{{corruptor.profession}}</span>
 
-			<h5>
-				Jumlah Korupsi
-			</h5>
-			<span>Rp{{corruptor.value}},00</span>
-
-			<h5>
-				Kelas
-			</h5>
-			<span>{{corruptorGrade}}</span>
+			<table class="bordered striped">
+				<tbody>
+					<tr>
+						<td>Nama</td>
+						<td>{{corruptor.name}}</td>
+					</tr>
+					<tr>
+						<td>Profesi</td>
+						<td>{{corruptor.profession}}</td>
+					</tr>
+					<tr>
+						<td>Jumlah Korupsi</td>
+						<td>Rp{{corruptor.value}},00</td>
+					</tr>
+					<tr>
+						<td>Kelas</td>
+						<td>{{corruptorGrade}}</td>
+					</tr>
+				</tbody>
+			</table>
 
 
 		</div>
