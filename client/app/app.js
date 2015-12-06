@@ -1,7 +1,5 @@
-'use strict';
-
 angular.module('sikk', ['ngRoute','firebase'])
-
+ 
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
         template: '<h1>Welcome to SIKK</h1>',
@@ -22,6 +20,10 @@ angular.module('sikk', ['ngRoute','firebase'])
         templateUrl: 'partials/cases.html',
         controller: 'CaseListController'
     })
+    .when('/corruptors', {
+        templateUrl: 'partials/corruptors.html',
+        controller: 'CorruptorListController'
+    })
     .otherwise({
         redirectTo: '/'
     });
@@ -38,7 +40,6 @@ angular.module('sikk', ['ngRoute','firebase'])
 	      // $location.path = "/";
 	    }
   	}
-
 }])
 
 .controller('CaseDetailController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl",  function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
@@ -53,8 +54,13 @@ angular.module('sikk', ['ngRoute','firebase'])
 }])
 
 .controller('CaseListController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl", function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
-	var ref = new Firebase(FirebaseUrl + "cases");
+    var ref = new Firebase(FirebaseUrl + "cases");
     $scope.cases = $firebaseArray(ref);
+}])
+
+.controller('CorruptorListController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl", function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
+	var ref = new Firebase(FirebaseUrl + "corruptors");
+    $scope.corruptors = $firebaseArray(ref);
 }])
 
 .constant('FirebaseUrl', 'https://shining-heat-6633.firebaseio.com/')
