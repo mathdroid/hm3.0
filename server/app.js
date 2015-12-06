@@ -18,7 +18,7 @@ mongoose.connection.on('error', function(err) {
 });
 
 // Populate databases with sample data
-if (config.seedDB) { require('./config/seed'); }
+// if (config.seedDB) { require('./config/seed'); }
 
 // Setup server
 var app = express();
@@ -33,8 +33,8 @@ require('./routes')(app);
 
 // Start server
 function startServer() {
-  server.listen(config.port, config.ip, function() {
-    console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+  server.listen(8080, config.ip, function() {
+    console.log('Express server listening on %d, in %s mode', 8080, app.get('env'));
   });
 }
 
