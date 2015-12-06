@@ -1,58 +1,58 @@
 <div class="row">
 	<h4 class="center">{{case.judul}}</h4>
+	<hr>
+
+	<div class="col s12 m3 l3">		
+		<a ng-click="incrementWatcher(case)" class="secondary-content"><i class="material-icons">visibility</i>{{case.watcher}}</a>
+	</div>
+
+	<div class="col s12 m6 l6">		
+		<a ng-click="incrementKemandekan(case)" class="waves-effect waves-light btn">Komplain Keterlambatan Kasus</a>
+		{{case.komplain_kemandekan}}
+	</div>
+
 	<div class="col s12 m12 l12 case-detail">
-		<div class="progress">
-		    <div class="determinate" style="width: 70%"></div>
+		<h5>Deskripsi Umum</h5>
+		<h6>Nomor Perkara</h6>
+		<span>{{case.nomor_perkara}}</span>
+		<h6>Tanggal Pendaftaran Kasus</h6>
+		<span>{{case.tanggal_pendaftaran}}</span>
+		<h6>Dakwaan</h6>
+		<span>{{case.dakwaan}}</span>		
+		<h6>Proses Saat Ini</h6>
+		<span>{{case.proses}}</span>
+		<h6>Terdakwa</h6>
+		<span>{{case.terdakwa}}</span>
+		<h6>Jumlah Uang Dikorupsi</h6>
+		<span>Rp..</span>
+
+		<div ng-if="currentProcess > 0">
+			<hr>
+			<h5>Penetapan</h5>
+			<h6>Tanggal</h6>
+			<span>...</span>
+			<h6>Majelis Hakim</h6>
+			<span>Ketua : {{case.hakim.ketua}}</span>
+			<br>
+			<span>Anggota : {{case.hakim.anggota1}}, {{case.hakim.anggota2}}, {{case.hakim.anggota3}}</span>				
 		</div>
-		<br>
-		<h5>
-			Nomor Perkara
-		</h5>
-		<span>
-			{{case.nomor_perkara}}
-		</span>
-		<h5>
-			Tanggal Pendaftaran Kasus
-		</h5>
-		<span>
-			{{case.tanggal_pendaftaran}}
-		</span>
-		<h5>
-			Dakwaan
-		</h5>
-		<span>
-			{{case.dakwaan}}
-		</span>
-		<h5>
-			Status Putusan
-		</h5>
-		<span>
-			{{case.status_putusan}}
-		</span>		
-		<h5>
-			Proses Saat Ini
-		</h5>
-		<span>
-			{{case.proses}}
-		</span>
-		<h5>
-			Terdakwa
-		</h5>
-		<span>
-			{{case.terdakwa}}
-		</span>
-		<h5>
-			Majelis Hakim
-		</h5>
-		<span>
-			Ketua : {{case.hakim.ketua}}
-		</span>
-		<br>
-		<span>
-			Anggota : {{case.hakim.anggota1}}, {{case.hakim.anggota2}}, {{case.hakim.anggota3}}
-		</span>		
-		<h5>
-			Jumlah Uang Dikorupsi
-		</h5>	
+
+		<div ng-if="currentProcess > 1">
+			<hr>
+			<h5>Putusan</h5>
+			<h6>Status Putusan</h6>
+			<span>{{case.status_putusan}}</span>
+		</div>
+
+		<div ng-if="currentProcess > 2">
+			<hr>
+			<h5>Kasasi</h5>			
+		</div>
+
+		<div ng-if="currentProcess > 3">
+			<hr>
+			<h5>Putusan Kasasi</h5>			
+		</div>
+
 	</div>
 </div>

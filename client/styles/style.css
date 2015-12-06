@@ -48,12 +48,20 @@
 .case-detail h5{
   color: #009688;}
 
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
+.case-detail span{
+  color: #757575;}
 
-  main {
-    flex: 1 0 auto;
-  }
+.case-detail hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #757575;}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
