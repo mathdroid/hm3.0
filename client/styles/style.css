@@ -45,6 +45,11 @@
 .corruptor-detail h5{
   color: #009688;}
 
+.corruptor-icon img{
+  cursor: pointer;
+  cursor: hand;
+  width: 30px;}
+
 .case-detail h5{
   color: #009688;}
 
@@ -55,6 +60,18 @@
   margin-top: 20px;
   margin-bottom: 20px;
   color: #757575;}
+
+.secondary-content{
+  cursor: pointer;
+  cursor: hand;}
+
+.watcher-icon{
+  cursor: pointer;
+  cursor: hand;}
+
+.watcher{
+  margin-top: 5px;
+  font-size:25px !important ;}
 
 body {
   display: flex;

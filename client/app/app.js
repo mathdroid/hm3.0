@@ -2,7 +2,8 @@ angular.module('sikk', ['ngRoute','firebase'])
  
 .config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {
-        template: '<h1>Welcome to SIKK</h1>',
+        templateUrl: 'partials/home.html',
+        controller: 'HomeController'
     })
     .when('/signup', {
         templateUrl: 'partials/signup.html',
@@ -31,6 +32,28 @@ angular.module('sikk', ['ngRoute','firebase'])
     .otherwise({
         redirectTo: '/'
     });
+}])
+
+.controller('HomeController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl", function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
+    var ref = new Firebase(FirebaseUrl + "cases");
+    $scope.cases = $firebaseArray(ref);
+
+    var ref2 = new Firebase(FirebaseUrl + "corruptors");
+    $scope.corruptors = $firebaseArray(ref2);
+
+    var ref3 = new Firebase(FirebaseUrl + "trivia");    
+    var triviaArray = $firebaseArray(ref3);
+    triviaArray.$loaded().then(function(){
+        $scope.trivia = triviaArray.$getRecord(Math.floor(Math.random() * triviaArray.length));
+    })
+    .catch(function(error) {
+        console.log("Error:", error);
+    });
+    
+    $scope.incrementWatcher = function(data) {        
+      data.watcher++;
+      $scope.cases.$save(data);      
+    }
 }])
 
 .controller('UsersController', ["$scope", "$firebaseArray", "FirebaseUrl", function($scope, $firebaseArray, FirebaseUrl) {

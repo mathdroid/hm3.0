@@ -2,11 +2,9 @@
 	<h4 class="center">{{case.judul}}</h4>
 	<hr>
 
-	<div class="col s12 m3 l3">		
-		<a ng-click="incrementWatcher(case)" class="secondary-content"><i class="material-icons">visibility</i>{{case.watcher}}</a>
-	</div>
-
-	<div class="col s12 m6 l6">		
+	<div class="col s12 m12 l12">
+		<a ng-click="incrementWatcher(case)" class="watcher-icon"><i class="material-icons">visibility</i></a>
+		{{case.watcher}}	
 		<a ng-click="incrementKemandekan(case)" class="waves-effect waves-light btn">Komplain Keterlambatan Kasus</a>
 		{{case.komplain_kemandekan}}
 	</div>
