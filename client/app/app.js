@@ -20,6 +20,10 @@ angular.module('sikk', ['ngRoute','firebase'])
         templateUrl: 'partials/cases.html',
         controller: 'CaseListController'
     })
+    .when('/corruptors/:id', {
+        templateUrl: function(params){ return 'partials/corruptor-detail.html/'; },
+        controller: 'CorruptorDetailController'
+    })
     .when('/corruptors', {
         templateUrl: 'partials/corruptors.html',
         controller: 'CorruptorListController'
@@ -56,6 +60,17 @@ angular.module('sikk', ['ngRoute','firebase'])
 .controller('CaseListController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl", function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
     var ref = new Firebase(FirebaseUrl + "cases");
     $scope.cases = $firebaseArray(ref);
+}])
+
+.controller('CorruptorDetailController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl",  function($scope, $routeParams, $firebaseArray, FirebaseUrl) {
+    var ref = new Firebase(FirebaseUrl + "corruptors");
+    var corruptorArray = $firebaseArray(ref);
+    corruptorArray.$loaded().then(function(){
+        $scope.corruptor = corruptorArray.$getRecord($routeParams.id);
+    })
+    .catch(function(error) {
+        console.log("Error:", error);
+    });
 }])
 
 .controller('CorruptorListController', ["$scope", "$routeParams", "$firebaseArray", "FirebaseUrl", function($scope, $routeParams, $firebaseArray, FirebaseUrl) {

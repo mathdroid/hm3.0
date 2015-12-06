@@ -40,5 +40,10 @@
 .corruptor-card img{
   width: 180px;
   height: 180px;
-  object-fit:cover;
-}
+  object-fit:cover;}
+
+.corruptor-detail h5{
+  color: #009688;}
+
+.case-detail h5{
+  color: #009688;}
