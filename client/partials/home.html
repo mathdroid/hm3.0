@@ -6,8 +6,9 @@
 			<!-- <h4 class="center red">Pilihan Editor</h4> -->
 		<div id="home">
 			<div>
-				<h4 class="center red-text text-accent-2">Kasus Teratas</h4>
+				<h4 class="center red-text text-lighten-2">Kasus Teratas</h4>				
 				<div class="container">
+					<hr class="red lighten-2">
 					<ul class="collection">
 					    <li ng-repeat="case in cases" class="collection-item avatar grey lighten-5">
 					      <img class="right" src="img/brick.png">
@@ -15,7 +16,7 @@
 					      <br>
 						  <span>{{case.terdakwa}} </span>
 						  <br>
-					      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper"><i class="material-icons">visibility</i>{{case.watcher}}</a>           
+					      <a ng-click="incrementWatcher(case)" class="watcher-icon valign-wrapper black-text"><i class="material-icons">visibility</i>{{case.watcher}}</a>           
 					    </li>
 					</ul>
 				</div>
@@ -23,7 +24,8 @@
 
 			<div class="grey lighten-3">
 				<div class="container">
-					<h4 class="center red-text text-accent-2">Koruptor Teratas</h4>
+					<h4 class="center red-text text-lighten-2">Koruptor Teratas</h4>
+					<hr class="red lighten-2">
 				
 					<div class="row">
 
@@ -48,8 +50,11 @@
 
 			<div>
 				<div class="container">
-					<h4 class="center red-text text-accent-2">Trivia</h4>
-					<h6 class="center">{{trivia.trivia}}</h6>
+					<h4 class="center red-text text-lighten-2">Trivia</h4>
+					<!-- <hr class="red lighten-2"> -->
+					<div class="card-panel z-depth-1">
+						<h6 class="center">{{trivia.trivia}}</h6>
+					</div>
 				</div>
 			</div>
 		</div>
