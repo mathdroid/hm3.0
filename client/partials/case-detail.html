@@ -23,7 +23,7 @@
 			<h6>Jumlah Uang Dikorupsi</h6>
 			<span>Rp..</span>
 
-			<div ng-if="currentProcess > 0">
+			<div ng-if="case.proses > 0">
 				<hr>
 				<h5>Penetapan</h5>
 				<h6>Tanggal</h6>
@@ -34,19 +34,19 @@
 				<span>Anggota : {{case.hakim.anggota1}}, {{case.hakim.anggota2}}, {{case.hakim.anggota3}}</span>				
 			</div>
 
-			<div ng-if="currentProcess > 1">
+			<div ng-if="case.proses > 1">
 				<hr>
 				<h5>Putusan</h5>
 				<h6>Status Putusan</h6>
 				<span>{{case.status_putusan}}</span>
 			</div>
 
-			<div ng-if="currentProcess > 2">
+			<div ng-if="case.proses > 2">
 				<hr>
 				<h5>Kasasi</h5>			
 			</div>
 
-			<div ng-if="currentProcess > 3">
+			<div ng-if="case.proses > 3">
 				<hr>
 				<h5>Putusan Kasasi</h5>			
 				<hr>
