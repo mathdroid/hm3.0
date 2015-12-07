@@ -14,7 +14,7 @@ angular.module('sikk', ['ngRoute','firebase'])
         controller: 'UsersController'
     })
     .when('/cases/:id', {
-        templateUrl: function(params){ return 'partials/case-detail.html/'; },
+        templateUrl: function(params){ return 'partials/case-detail.html'; },
         controller: 'CaseDetailController'
     })
     .when('/cases', {
@@ -22,7 +22,7 @@ angular.module('sikk', ['ngRoute','firebase'])
         controller: 'CaseListController'
     })
     .when('/corruptors/:id', {
-        templateUrl: function(params){ return 'partials/corruptor-detail.html/'; },
+        templateUrl: function(params){ return 'partials/corruptor-detail.html'; },
         controller: 'CorruptorDetailController'
     })
     .when('/corruptors', {
